@@ -2,16 +2,16 @@ import com.example.Alex;
 import com.example.Cat;
 import com.example.Feline;
 import com.example.Lion;
-import org.mockito.Spy;
+import org.mockito.Mockito;
+
 
 public class BaseTestCase {
 
-    @Spy
-    Feline felineSpy;
+    Feline felineSpy = Mockito.spy(new Feline());
 
     Feline feline = new Feline();
-    Lion lion = new Lion("Самец", felineSpy);
-    Alex alex = new Alex("Самец", felineSpy);
+    Lion lion = new Lion("Самец", felineSpy, felineSpy);
+    Alex alex = new Alex(felineSpy, felineSpy);
     Cat cat = new Cat(felineSpy);
 
     public BaseTestCase() throws Exception {

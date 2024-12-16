@@ -1,4 +1,3 @@
-import com.example.Cat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -22,14 +21,12 @@ public class CatTests extends BaseTestCase {
 
     @Test
     public void verifyGetFoodTest() throws Exception {
-        Cat cat = new Cat(felineSpy);
         cat.getFood();
         Mockito.verify(felineSpy, Mockito.times(1)).eatMeat();
     }
 
     @Test
     public void getFoodTest() throws Exception {
-        Cat cat = new Cat(felineSpy);
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expectedFood, cat.getFood());
     }

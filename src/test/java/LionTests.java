@@ -16,7 +16,6 @@ public class LionTests extends BaseTestCase {
 
     @Test
     public void verifyGetKittensTest() throws Exception {
-        Lion lion = new Lion("Самец", felineSpy);
         lion.getKittens();
         Mockito.verify(felineSpy, Mockito.times(1)).getKittens(1);
     }

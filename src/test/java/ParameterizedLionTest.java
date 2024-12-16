@@ -37,7 +37,7 @@ public class ParameterizedLionTest extends BaseTestCase {
             exceptionRule.expect(Exception.class);
             exceptionRule.expectMessage("Используйте допустимые значения пола животного - самец или самка");
         }
-        Lion lion = new Lion(sex, felineSpy);
+        Lion lion = new Lion(sex, felineSpy, felineSpy);
         assertEquals(expectedDoesHaveMane, lion.doesHaveMane());
     }
 

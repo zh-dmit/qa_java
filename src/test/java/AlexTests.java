@@ -10,19 +10,19 @@ public class AlexTests extends BaseTestCase {
     }
 
     @Test
-    public void getFriendsTest() throws Exception {
+    public void getFriendsTest() {
         List<String> expectedFriends = List.of("Марти", "Глория", "Мелман");
         assertEquals(expectedFriends, alex.getFriends());
     }
 
     @Test
-    public void getPlaceOfLivingTest() throws Exception {
+    public void getPlaceOfLivingTest() {
         String expectedPlace = "Нью-Йоркский зоопарк";
         assertEquals(expectedPlace, alex.getPlaceOfLiving());
     }
 
     @Test
-    public void getKittensTest() throws Exception {
+    public void getKittensTest() {
         int expectedKittens = 0;
         assertEquals(expectedKittens, alex.getKittens());
     }
